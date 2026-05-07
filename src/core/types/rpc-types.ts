@@ -129,6 +129,8 @@ export interface ExtensionMethodMap extends RpcMethodMap {
   getSdlcToolAnalysis: { params: { filter?: DateFilter } | Record<string, unknown>; result: { mcpServers: unknown[] } };
   getSdlcRepoScan: { params: Record<string, unknown> | undefined; result: { repos: unknown[] } };
   getSdlcGitHubData: { params: Record<string, unknown>; result: unknown };
+  saveModelBudgets: { params: { budgets: Record<string, number> }; result: { ok: boolean } };
+  loadModelBudgets: { params: Record<string, unknown> | undefined; result: Record<string, number> };
 }
 
 export type ExtensionMethodName = keyof ExtensionMethodMap;

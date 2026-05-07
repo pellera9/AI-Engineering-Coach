@@ -315,7 +315,7 @@ export async function renderOutput(container: HTMLElement, currentFilter: DateFi
     const topWsNames = allWsNames.slice(0, 15);
     const otherWsNames = allWsNames.slice(15);
     const otherWsData = aggLabels.map((_, i) => otherWsNames.reduce((sum, ws) => sum + (aggByWs[ws]?.[i] ?? 0), 0));
-    const dailyDatasets = topWsNames
+    const dailyDatasets: { label: string; data: number[]; backgroundColor: string; borderColor: string; borderWidth: number }[] = topWsNames
       .filter(ws => aggByWs[ws])
       .map((ws, i) => ({
         label: ws,
