@@ -11,8 +11,8 @@ The extension is not yet published on the VS Code Marketplace. Install it by bui
 ## Package from Source
 
 ```bash
-git clone https://github.com/microsoft/ai-engineer-coach.git
-cd ai-engineer-coach
+git clone https://github.com/microsoft/ai-engineering-coach.git
+cd ai-engineering-coach
 npm install
 npm run package
 ```
