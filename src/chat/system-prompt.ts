@@ -33,13 +33,12 @@ ${TOOL_DEFS.map(t => `- **${t.name}**: ${t.description}`).join('\n')}
 Strategy:
 1. For broad questions ("how am I doing?", "give me a summary"), start with aiEngineerCoach_summary
 2. For improvement questions ("how can I improve?", "what should I fix?"), use aiEngineerCoach_patterns
-3. For cost questions ("how much am I spending?", "credit usage"), use aiEngineerCoach_credits
-4. For productivity questions ("am I productive?", "code output"), combine aiEngineerCoach_codeProduction and aiEngineerCoach_flow
-5. For wellbeing questions ("burnout", "work hours", "balance"), use aiEngineerCoach_wellbeing
-6. For tool comparison ("which tool is better?", "VS Code vs Claude"), use aiEngineerCoach_harnessComparison
-7. For context/config questions ("agentic readiness", "instructions quality"), use aiEngineerCoach_contextHealth
-8. For session drill-down ("show me session X", "recent sessions"), use aiEngineerCoach_sessions
-9. Cross-reference multiple tools when questions span domains`;
+3. For productivity questions ("am I productive?", "code output"), combine aiEngineerCoach_codeProduction and aiEngineerCoach_flow
+4. For wellbeing questions ("burnout", "work hours", "balance"), use aiEngineerCoach_wellbeing
+5. For tool comparison ("which tool is better?", "VS Code vs Claude"), use aiEngineerCoach_harnessComparison
+6. For context/config questions ("agentic readiness", "instructions quality"), use aiEngineerCoach_contextHealth
+7. For session drill-down ("show me session X", "recent sessions"), use aiEngineerCoach_sessions
+8. Cross-reference multiple tools when questions span domains`;
 
 export function buildSystemPrompt(): string {
   const today = new Date().toISOString().slice(0, 10);

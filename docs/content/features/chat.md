@@ -35,13 +35,12 @@ Use a slash command with no additional text to get the default analysis, or add 
 
 ## Available Tools
 
-The participant has access to 11 backend tools that it selects automatically based on your question:
+The participant has access to 10 backend tools that it selects automatically based on your question:
 
 | Tool | Domain | What it returns |
 |---|---|---|
 | `aiEngineerCoach_summary` | Observe | Session counts, recommendations, top anti-patterns |
 | `aiEngineerCoach_activity` | Observe | Daily requests, LOC, sessions, and harness breakdown |
-| `aiEngineerCoach_credits` | Measure | Credit usage with per-model breakdown and daily trend |
 | `aiEngineerCoach_codeProduction` | Measure | AI vs user LOC, language breakdown, workspace distribution |
 | `aiEngineerCoach_flow` | Measure | Deep work scores, best hours, follow-up latency |
 | `aiEngineerCoach_patterns` | Improve | Anti-patterns and practice recommendations with severity |
@@ -78,12 +77,6 @@ This means a single question like "compare my productivity this week vs last wee
 @aicoach Why is my prompt quality score dropping?
 ```
 → Calls `patterns` with recent date range, surfaces the specific anti-patterns driving the score down with example prompts from your sessions.
-
-**Cost awareness:**
-```
-@aicoach Am I burning through credits too fast this month?
-```
-→ Calls `credits`, shows daily spend trend, most expensive model, and projected end-of-month usage.
 
 ## Follow-ups
 
