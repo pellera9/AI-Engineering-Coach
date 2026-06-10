@@ -41,6 +41,12 @@
     "onView:aiEngineerCoach.welcome"
   ],
   "main": "./dist/extension.js",
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": "limited",
+      "description": "In untrusted workspaces, project-level rules and metrics (.ai-engineer-coach/) are not loaded. Built-in and personal rules still work."
+    }
+  },
   "contributes": {
     "commands": [
       {
@@ -303,7 +309,7 @@
     "spellcheck": "cspell \"src/**/*.ts\" \"docs/**/*.md\" \"*.md\"",
     "knip": "knip",
     "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck && npm run lint && npm run spellcheck && npm run knip && npm run test",
+    "check": "npm run typecheck && npm run lint && npm run spellcheck && npm run knip && npm run lockfile-lint && npm run test",
     "check-size": "node scripts/check-bundle-size.mjs",
     "test:e2e": "npx playwright test",
     "lockfile-lint": "lockfile-lint",
